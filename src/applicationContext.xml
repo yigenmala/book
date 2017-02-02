@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	     xmlns:aop="http://www.springframework.org/schema/aop"
+	     xmlns:tx="http://www.springframework.org/schema/tx"
+	     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<!-- 配置sessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>	
+	</bean>           
+	
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>	
+	</bean>
+	
+	<!-- 配置事务的传播特性 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="insert*" propagation="REQUIRED"/>
+			<tx:method name="delete*" propagation="REQUIRED"/>
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="*" read-only="true"/>
+		</tx:attributes>
+	</tx:advice>
+	
+	<!-- 那些类的哪些方法参与事务 -->
+	<aop:config>
+		<aop:pointcut id="allManagerMethod" expression="execution(* com.dao.*.*(..))"/>
+		<aop:advisor pointcut-ref="allManagerMethod" advice-ref="txAdvice"/>
+	</aop:config>
+	
+	
+	<!--           daos          -->
+	<bean id="userDao" class="com.dao.impl.UserDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="fenleiDao" class="com.dao.impl.FenleiDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="gysDao" class="com.dao.impl.GysDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="productDao" class="com.dao.impl.ProductDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="shouhuoDao" class="com.dao.impl.ShouhuoDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="gouwucheDao" class="com.dao.impl.GouwucheDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="dingdanDao" class="com.dao.impl.DingdanDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="xiaoshouDao" class="com.dao.impl.XiaoshouDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="shoucangDao" class="com.dao.impl.ShoucangDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="liuyanDao" class="com.dao.impl.LiuyanDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="dingdanitemDao" class="com.dao.impl.DingdanitemDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	<bean id="picDao" class="com.dao.impl.PicDaoImpl" >
+		<property name="sessionFactory"><ref bean="sessionFactory" /></property>
+	</bean>
+	
+	
+	
+	<!--           actions          -->
+	<bean id="manageAction" class="com.action.ManageAction" scope="prototype">
+
+		<property name="userDao"><ref bean="userDao" /></property>
+		
+		<property name="fenleiDao"><ref bean="fenleiDao" /></property>
+		
+		<property name="gysDao"><ref bean="gysDao" /></property>
+		
+		<property name="productDao"><ref bean="productDao" /></property>
+		
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+		
+		<property name="xiaoshouDao"><ref bean="xiaoshouDao" /></property>
+		
+		<property name="liuyanDao"><ref bean="liuyanDao" /></property>
+		
+		<property name="dingdanitemDao"><ref bean="dingdanitemDao" /></property>
+		
+		<property name="picDao"><ref bean="picDao" /></property>
+		
+	</bean>
+	
+
+	<bean id="indexAction" class="com.action.IndexAction" scope="prototype">
+		
+		<property name="productDao"><ref bean="productDao" /></property>
+		
+		<property name="userDao"><ref bean="userDao" /></property>
+		
+		<property name="shouhuoDao"><ref bean="shouhuoDao" /></property>
+		
+		<property name="gouwucheDao"><ref bean="gouwucheDao" /></property>
+		
+		<property name="dingdanDao"><ref bean="dingdanDao" /></property>
+		
+		<property name="shoucangDao"><ref bean="shoucangDao" /></property>
+		
+		<property name="liuyanDao"><ref bean="liuyanDao" /></property>
+		
+		<property name="dingdanitemDao"><ref bean="dingdanitemDao" /></property>
+
+	</bean>
+	
+</beans>
