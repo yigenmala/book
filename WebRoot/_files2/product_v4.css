@@ -1,0 +1,938 @@
+@charset "utf-8";
+
+
+.em-mark,.s-mark{background:url(http://cdn09.ehaier.com/v3/images/sprite-icon.png) no-repeat;}
+
+.a-view-gallery,.b-thumb-btn,
+
+.p-delivery .s-location,.p-product-btn .a-to-buy,.p-product-btn .a-to-cart, .detailproduct .a-to-cart,
+
+.p-share-fav .a-fav-product,.ul-rank-cont .em-rank-num,
+
+.em-star,.ul-comments-list .user-info,.p-product-btn .s-store,.p-product-btn .s-store-notice,.dd-consult-ask,.p_page a.a-page,
+
+.product-info-list .b-cach-pay,.product-info-list .a-online-services,.p-consult-link .a-openKF{background:url(http://cdn09.ehaier.com/v3/images/product/sprite-product.png) no-repeat ;}
+
+.h2-rank-tab,.dt-similar-recom,.ul-details-tab li,.ul-consult-tab li,.ul-details-tips{background:url(http://cdn09.ehaier.com/v3/images/product/sprite-product-repeat.png) repeat-x;}
+
+.ul-details-tips .li-tips{background:url(http://cdn09.ehaier.com/v3/images/dot.png) no-repeat;}
+
+.txt_red{ color:#e31a52;}
+.mtop_10{ margin-top:10px;}
+
+/* product-info-box */
+
+.product-info-box{position:relative;z-index:2;}
+
+.product-info{float:right;width:605px;}
+
+
+
+.product-gallerybox{float:left;width:384px;}
+
+.em-mark{position:absolute;top:8px;left:8px;width:52px;height:52px;text-indent:-999em;overflow:hidden;}
+
+.mark-saving{background-position:-100px 0;}
+
+.s-mark{width:26px;height:26px;display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;vertical-align:middle;font-size:0em;line-height:0;text-indent:-999em;overflow:hidden;text-indent:0\9;color:fff;}
+
+
+
+a.a-view-gallery{position:absolute;width:80px;background-color:#fff;background-position:-96px -96px;height:25px;line-height:25px;right:0px;bottom:0px;text-indent:18px;color:#d71249;font-size:12px;}
+
+
+
+a.a-view-gallery:hover{text-decoration:underline;}
+
+.gallery-bigshow{position:relative;border:1px solid #ddd;width:382px;height:405px; padding-top:1px; text-align:center;font-size:0em;line-height:0;}
+
+.gallery-showBox{height:380px;}
+
+.gallery-thumbbox{position:relative;padding:15px 29px 0;width:325px;}
+
+.gallery-thumb-scrollbox{position:relative;width:325px;overflow:hidden;}
+
+.pop-gallery-thumb,.ul-gallery-thumb{position:relative;overflow:hidden;zoom:1;width:30000px;}
+
+.pop-gallery-thumb .li-thumb,.ul-gallery-thumb .li-thumb{float:left;width:65px;height:70px;text-align:center;}
+
+.pop-gallery-thumb .img-thumb,.ul-gallery-thumb .img-thumb{border:1px solid #fff;}
+
+.pop-gallery-thumb a:hover .img-thumb,.pop-gallery-thumb .li-now .img-thumb,
+
+.ul-gallery-thumb a:hover .img-thumb,.ul-gallery-thumb .li-now .img-thumb{border:1px solid #ccc;}
+
+
+
+.b-thumb-btn{position:absolute;top:21px;width:24px;height:40px;text-indent:-999em;overflow:hidden;}
+
+.gallery-thumbbox .b-prev,.pop-gallery-bigshow .b-prev{left:0px;background-position:3px -97px;}
+
+.gallery-thumbbox .b-next,.pop-gallery-bigshow .b-next{right:0px;background-position:3px -146px;}
+
+.gallery-thumbbox .b-prev-active,.pop-gallery-bigshow .b-prev-active{background-position:-27px -97px;cursor:hand;cursor:pointer;}
+
+.gallery-thumbbox .b-next-active,.pop-gallery-bigshow .b-next-active{background-position:-27px  -146px;cursor:hand;cursor:pointer;}
+
+
+
+.zoomplepopup{position:absolute;top:0px;left:0px;display:none;background:#fff;border:1px solid #e9493d;overflow:hidden;opacity:0.5;filter:alpha(opacity = 50);z-index:10;cursor:move;}
+
+
+
+#probig-preview{position:absolute;visibility:hidden;top:-1px;left:392px;width:400px;height:400px;background:#fff;border:1px solid #ddd;overflow:hidden;}
+
+.img-preview{position:relative;}
+
+
+
+
+
+.pop-gallery-bigshow{position:relative;text-align:center;padding:10px 10px 5px;width:540px;margin:0 0 0 20px;}
+
+.pop-gallery-bigshow .b-thumb-btn{top:180px;}
+
+.pop-gallery-thumbbox{position:relative;width:325px;padding:12px 60px 0;margin:0 0 0 80px;}
+
+
+
+.pop-lightbox{padding-bottom:5px;-moz-border-radius:0;-webkit-border-radius:0;border-radius:0;background:#fff;}
+
+.pop-lightbox .s-sopop-close{right:0px;}
+
+.pop-lightbox .so-popbox-cont{text-align:center;padding:5px 5px 0;}
+
+.pop-lightbox img{margin:0;}
+
+.p-gallery-show-btn{display:none;}
+
+a.a-galleryShow{position:absolute;width:80px;background-color:#fff;height:25px;line-height:25px;right:100px;bottom:0px;text-indent:18px;color:#d71249;font-size:12px;}
+
+
+
+.s-btn-gallery{z-index:1500;position:fixed;top:50%;margin-top:-50px;width:100px;height:100px;background:#d71249 url(http://cdn09.ehaier.com/v3/images/product/gallerybtn.png) no-repeat ;cursor:hand;cursor:pointer;filter:alpha(opacity=80);opacity:0.8;}
+
+.s-btn-gallery:hover{filter:alpha(opacity=100);opacity:1;}
+
+.s-gallery-prev{left:0px;background-position:10px 10px;}
+
+.s-gallery-next{right:0px;background-position:-70px 10px;}
+
+#span-gallery-page{position:absolute;bottom:10px;left:50%;width:60px;height:20px;line-height:20px;margin:0 0 0 -30px;background:#999;color:#fff;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;text-align:center;font-weight:bold;box-shadow:1px 1px 2px #666 inset;-webkit-box-shadow:1px 1px 2px #666 inset;-moz-box-shadow:1px 1px 2px #666 inset;}
+
+.pop-lightbox .s-loading{display:none;position:absolute;top:50%;left:50%;margin:-17px 0 0 -17px;width:35px;height:35px;}
+
+
+
+
+
+.product-title{font-size:1.4em;font-family:"微软雅黑";color:#000;padding:0 0 8px;}
+
+.product-title .mark-hot{background-position:-177px -6px;}
+
+.product-title-intro{font-size:1.17em;color:#d71249;line-height:1.4em;}
+
+.product-abs{border:1px dashed #ddd;line-height:1.4em;margin:10px 0;padding:6px;font-weight:normal;}
+
+.product-info-list li{line-height:2em;clear:both;}
+
+.product-info-list .li-services{position:relative;width:100%;}
+
+.product-info-list .s-title{float:left;width:68px;}
+
+.product-info-list .cur-price{font-size:1.3em;}
+
+.product-info-list .em-subsidy{background:#d71249;color:#fff;padding:1px 4px;}
+
+.product-info-list .product-info-list{position:relative;}
+
+.strong-comm-count{font-weight:normal;cursor:hand;cursor:pointer;}
+
+.strong-comm-count .haierred{font-weight:bold;}
+
+.product-info-list .b-cach-pay{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;padding-left:23px;background-position:0 -195px;}
+
+.product-info-list .a-online-services{position:absolute;top:0px;right:1px;width:88px;height:23px;line-height:21px;text-indent:34px;color:#fff;background-position:-450px -105px;}
+
+a.a-online-services:hover{color:#fff;}
+
+
+
+.deliverybox{position:relative;background:#f4f5f7;border:1px solid #ddd;margin-top:5px;padding:10px;}
+
+.p-delivery{zoom:1;line-height:2em;margin-bottom:10px;}
+
+.p-delivery .s-title{float:left;width:50px;}
+
+.p-delivery .s-location{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;background-color:#fff;border:1px solid #cecbce;cursor:pointer;height:22px;line-height:21px;padding:0 18px 0 5px;margin:0 4px 0 0;background-position:100% -148px;}
+
+.sel-location-box{display:none;position:absolute;top:32px;left:20px;width:440px;padding:20px 0;border:1px solid #cecbce;background:#fff;overflo:whidden;}
+
+.sel-location-box .fe_province,.sel-location-box .fe_city,.sel-location-box .fe_region{border:1px solid #ccc;display:inline;float:left;height:180px;margin:0 0 0 20px;padding:0;width:120px;color:#444;}
+
+.p-product-btn{padding:0 0 0 48px;overflow:hidden;zoom:1;}
+
+.details-tab-title a.a-to-buy,.p-product-btn a.a-to-buy,.p-product-btn .a-to-buy,.p-product-btn .s-store-notice{float:left;width:95px;height:42px;line-height:36px;padding-left:25px;text-align:center;background-position:0 0;color:#fff;font-weight:bold;font-size:1.34em;font-family:"微软雅黑"; border:none;}
+
+.details-tab-title a.a-to-cart,.p-product-btn a.a-to-cart,.detailproduct a.a-to-cart{float:left;width:92px;height:35px;line-height:30px;background-position:-123px 0;padding-left:22px;margin:7px 10px 0;display:inline;color:#fff;font-size:1.17em;font-weight:bold;font-family:"微软雅黑";text-align:center;}
+
+.p-product-btn a.a-to-buy:hover{background-position:0 -44px; }
+
+.p-product-btn a.a-to-cart:hover,.detailproduct a.a-to-cart:hover{background-position:-123px -36px;}
+
+/*.details-tab-title a.a-to-cart,.details-tab-title a.a-to-buy{display:none;float:right;}*/
+
+/*.details-tab-title-scroll a.a-to-cart,.details-tab-title-scroll a.a-to-buy{display:block;}*/
+
+.p-product-btn .s-store{float:left;display:inline;width:84px;height:47px;margin:0 5px 0 0;text-indent:-999em;overflow:hidden;}
+
+.p-product-btn .s-store-notice{background-position:-300px -130px;cursor:hand;cursor:pointer; margin-top:7px; margin-right:10px;}
+
+.p-product-btn .s-store-notice:hover{background-position:-300px -174px;cursor:hand;cursor:pointer;}
+
+.p-product-btn .s-store-lack{background-position:-540px -55px;}
+
+.p-product-btn .a-book{background-position:-300px -130px;}
+
+
+
+.s-pro-num{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;height:20px;border:1px solid #ddd;overflow:hidden;}
+
+.s-pro-num .em-sub,.s-pro-num .em-add{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;width:20px;height:20px;line-height:20px;line-height:17px\9;font-family:"宋体";font-size:1.17em;text-align:center;cursor:hand;cursor:pointer;}
+
+.s-pro-num .txt-num{height:22px;line-height:18px;background:#fff;border:0;border-left:1px solid #ddd;border-right:1px solid #ddd;width:25px;text-align:center;}
+
+
+
+.p-share-fav{clear:both;padding:12px 0 0;}
+
+
+
+
+
+.p-share-fav .a-fav-product{margin:0 0 0 40px;display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;height:24px;line-height:24px;background-position:0 -250px;padding:0 0 0 28px;vertical-align:middle;}
+
+
+
+
+
+/* product-details-box */
+
+.product-details-box{position:relative;z-index:1;overflow:hidden;zoom:1;}
+
+
+
+.details-bar{float:left;width:192px;overflow:hidden;zoom:1;}
+
+.rank-tabbox{position:relative;border:1px solid #ddd;border-top:41px solid #ddd;border-bottom:0px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;}
+
+.h2-rank-tab{position:absolute;top:-40px;left:0px;_top:1px;width:94px;height:40px;line-height:40px;text-align:center;font-size:1.17em;font-weight:normal;background-position:0 0;cursor:hand;cursor:pointer;}
+
+.h2-rank-tab-2{width:95px;left:95px;}
+
+.h2-rank-tab-now{background:#fff;font-weight:bold;}
+
+.ul-rank-cont{display:none;}
+
+.ul-rank-cont li{position:relative;padding:10px;border-bottom:1px solid #ddd;}
+
+.ul-rank-cont .em-rank-num{position:absolute;top:10px;left:10px;text-align:center;width:19px;height:19px;line-height:19px;background-position:0 -300px;color:#fff;}
+
+.ul-rank-now{display:block;}
+
+.ul-rank-cont .a-thumb{display:block;padding:0 0 0 25px;}
+
+.ul-rank-cont img{width:36px;height:36px;}
+
+.ul-rank-cont .a-title{display:block;padding:0 0 5px 25px;}
+
+.ul-rank-cont .s-price{display:block;font-weight:bold;padding:0 0 0 25px;}
+
+
+
+.dl-similar-recom{border:1px solid #ddd;border-bottom:0px;margin:0 0 10px;-moz-border-radius:3px;-webkit-border-radius:3px ;border-radius:3px;}
+
+.dt-similar-recom{height:48px;padding:0 0 0 16px;line-height:40px;font-size:1.17em;background-position:0 -50px;font-weight:bold;}
+
+.dl-similar-recom .a-thumb{display:block;text-align:center;}
+
+.dd-similar-recom{border-bottom:1px solid #ddd;}
+
+.dd-similar-recom .h3-title{font-weight:normal;text-align:center;}
+
+.dd-similar-recom .h4-price{color:#d71249;padding:10px 0;font-size:1.17em;text-align:center;}
+
+
+
+.details-cont-main{float:right;width:798px;overflow:hidden;}
+
+
+
+.details-tab-title,.consult-tab-title{background:#fff;width:798px;height:41px;border-bottom:1px solid #ddd;margin-top:-1px;}
+
+/* ul-details-tab */
+
+.ul-details-tab,.ul-consult-tab{position:relative;top:1px;float:left;height:41px;overflow:hidden;zoom:1;border-left:1px solid #ddd;border-right:1px solid #ddd;-moz-border-radius:3px 3px 0 0;-webkit-border-radius:3px 3px 0 0;border-radius:3px 3px 0 0;font-size:1.17em;color:#fff;z-index:2;}
+
+.ul-details-tab .li-tab,.ul-consult-tab .li-tab{margin-left:-2px;float:left;height:41px;line-height:41px;padding:0 30px;background-position:0 -100px;cursor:hand;cursor:pointer;}
+
+.ul-details-tab .li-now,.ul-consult-tab .li-now{background:#fff;color:#222;border-top:1px solid #ddd;height:40px;line-height:40px;font-weight:bold;}
+
+.ul-consult-tab{}
+
+.ul-consult-tab .li-tab{padding:0;width:115px;text-align:center;}
+
+.ul-consult-tab .li-now{width:120px;}
+
+
+
+.ul-details-tips{clear:both;height:52px;padding:4px 10px 0;background-position:0 -156px;overflow:hidden;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+
+.ul-details-tips .li-tips{line-height:26px;float:left;width:350px;padding:0 0 0 25px;background-position:16px 12px;}
+
+
+
+.details-cont{display:none;border:1px solid #ddd;border-top:0px;clear:both;margin-top:-1px;margin:0 0 10px;}
+
+.details-cont-now{display:block;}
+
+.details-parameter,.details-services{ padding:15px;}
+
+.details-comments{ padding:0;}
+
+
+
+.h3-pro-pram{width:96%;font-size:1.17em;padding:0 0 5px 4px;margin:10px auto 5px;border-bottom:2px solid #a0a1a3;}
+
+.table-pro-pram{width:96%;margin:0 auto;}
+
+.table-pro-pram th,.table-pro-pram td{padding:10px 4px;border-bottom:1px solid #ddd;}
+
+.table-pro-pram th{width:30%;}
+
+
+
+.h3-comment-tab{border-bottom:2px solid #b00b25;}
+
+.h3-comment-tab .s-tab{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;padding:0 15px;height:24px;line-height:24px;background:#eee;border-top:1px solid #ddd;border-right:1px solid #ddd;color:#202020;cursor:hand;cursor:pointer;}
+
+.h3-comment-tab .em-num{font-weight:bold;color:#999;}
+
+.h3-comment-tab .s-tab-now{background:#b00b25;border-top:1px solid #b00b25;color:#fff;}
+
+.h3-comment-tab .s-tab-now .em-num{color:#fff;}
+
+
+
+/* ul-comments-list */
+
+.ul-comments-list .li-comment{padding:12px 0 0;overflow:hidden;zoom:1;color:#202020;}
+
+.ul-comments-list .user-info{position:relative;float:left;width:125px;text-align:center;background-position:-320px -290px;}
+
+.ul-comments-list .s-username,.ul-comments-list .s-buydate{display:block;line-height:2.5em;font-size:0.92em;letter-spacing:-1px;}
+
+.ul-comments-list .comment-info{float:left;width:605px;padding:15px 15px 5px;background:#fffcf5;border:1px solid #f3e6c6;margin:0 0 0 -1px;display:inline;}
+
+.h3-comment-title{position:relative;padding:0 130px 3px 2px;margin:0 0 6px;line-height:1.8em;border-bottom:1px solid #f3e6c6;overflow:hidden;zoom:1;}
+
+.h3-comment-title .strong-title{margin:0 6px 0 0;}
+
+.em-star{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;margin:0 6px 0 0;width:65px;height:13px;background-position:-300px -99px;vertical-align:middle;}
+
+.em-star-5{background-position:-300px -99px;}
+
+.em-star-4{background-position:-313px -99px;}
+
+.em-star-3{background-position:-326px -99px;}
+
+.em-star-2{background-position:-339px -99px;}
+
+.em-star-1{background-position:-352px -99px;}
+
+.em-star-0{background-position:-365px -99px;}
+
+
+
+.h3-comment-title .em-time{position:absolute;bottom:2px;right:1px;color:#999;font-size:0.92em;}
+
+.p-comment-cont{padding:3px 0;line-height:1.5em;overflow:hidden;zoom:1;}
+
+.p-comment-cont .em-title{float:left;width:64px;text-align:right;color:#cf5d71;}
+
+.p-comment-cont .s-cont{float:left;width:535px;}
+
+.h3-comment-reply{margin:5px 0;font-weight:normal;text-align:right;}
+
+.h3-comment-reply .a-reply{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;height:21px;line-height:21px;padding:0 6px;background:#b90e2d;color:#fff;}
+
+.p-comment-reply{display:none;padding:0 0 10px 65px;}
+
+.p-comment-reply .txta-reply{width:400px;height:4.5em;line-height:1.5em;padding:5px;vertical-align:bottom;}
+
+.p-comment-reply .btn-reply{margin:0 0 0 5px;}
+
+a.a-more-comment{display:block;width:150px;text-align:center;margin:15px auto 5px;color:#d71249;text-decoration:underline;font-family:"宋体";}
+
+a.a-more-comment:hover{text-decoration:none;}
+
+/* ul-comments-list */
+
+.ul-comments-list{}
+
+/* comment-tip */
+
+.comment-tip{ margin:10px 0; padding:10px;border:1px solid #ddd; line-height:1.8em; overflow:hidden;}
+
+.h3-comment-tip{padding:10px 0 2px;font-weight:bold;color:#f00000;}
+
+.p-comment-tip{text-indent:2em;}
+
+.comment-tip a{color:#d71249;}
+
+.comment-tip a:hover{color:#fe697d;}
+
+
+
+.details-consult{position:relative;top:-1px;border:1px solid #ddd;clear:both;zoom:1;padding:10px;}
+
+/* dl-consult */
+
+.dl-consult{position:relative;padding:10px 10px 15px 80px;}
+
+.dl-consult .dd-photo{position:absolute;top:10px;left:15px;_left:-64px;}
+
+.dl-consult .img-photo{border:1px solid #ddd;}
+
+.dt-consult-title{position:relative;font-weight:bold;}
+
+.dt-consult-title .em-date{position:absolute;top:1px;right:2px;_right:22px;font-weight:normal;color:#999;font-size:0.92em;}
+
+.dd-consult-ask{position:relative;top:1px;padding:8px 0;line-height:1.5em;color:#00904c;background-position:15px 100%;}
+
+.dd-consult-answer{border:1px solid #eaeaea;padding:12px;line-height:1.7em;}
+
+.dd-consult-answer .em-title{font-weight:bold;}
+
+.dd-consult-answer .p-date{text-align:right;color:#999;font-size:0.92em;}
+
+
+
+.p-consult-link{padding:20px;float:right;padding-right: 0px;}
+.p-query-head{text-align: center;}
+a.a-link-consult{text-align:center;font-size:1em;font-family:"微软雅黑";}
+a.a-query{color:#e3114b;}
+.p_page .a-query{float: left;}
+.p-consult-link .a-openKF{background-position: -450px -105px; display: inline-block;*display: block; 
+	width: 88px;height: 23px;line-height: 21px;
+text-indent: 34px;
+color: #fff;}
+
+/* p_page */
+
+.p_page{padding:12px 6px 12px 72px;text-align:right;}
+
+.p_page .em-pre{margin:0 4px;}
+
+.p_page a{margin:0 5px;}
+
+.p_page a.a-page{display:-moz-inline-stack;display:inline-block;*display:inline;*zoom:1;width:49px;height:26px;line-height:23px;line-height:25px\9;text-align:center;vertical-align:middle;}
+
+.p_page a.a-prev{padding:0 6px 0 19px;background-position:-451px 0px;}
+
+.p_page a.a-next{padding:0 19px 0 6px;background-position:-526px 0px;}
+
+.p_page a.a-prev:hover{background-position:-451px -26px;color:#fff;}
+
+.p_page a.a-next:hover{background-position:-526px -26px;color:#fff;}
+
+
+
+/* js-scroll-tab */
+
+.js-scroll-tab{position:fixed;top:0px;}
+
+
+
+.gallery-popBox{display:none;}
+
+.ajax-stockeNotice{display:none;}
+
+.sopop-stockeNotice .so-popbox-cont{padding:10px;}
+
+.so-popTip{border:1px solid #ff812d;background:#ffffd0;color:#f00;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px;box-shadow:1px 1px 2px #ccc;-webkit-box-shadow:1px 1px 2px #ccc;-moz-box-shadow:1px 1px 2px #ccc;}
+
+.so-popTip .s-sopop-close{display:none;}
+
+.so-popTip .so-popbox-cont{padding:10px 10px 0;text-align:center;}
+
+
+
+.txta-lazy{display:none;}
+
+/*edit by Chenxi, add btn style*/
+.ajax-stockeNotice a.a-btn .s-btn{background:#005aa9;padding:0 15px;}
+.ajax-stockeNotice a.a-btn{line-height: 25px;}
+
+
+/*商品介绍*/
+
+.goodsType{background:url(http://cdn09.ehaier.com/v3/images/product/bg_goods.png) left bottom repeat-x; padding:0 10px 0 30px; width:756px; overflow:hidden;}
+
+.goodsTypeItem{float:left; padding:15px 20px 15px 0; width:232px; display:inline;}
+
+.goodsTypeItem img{float:left; height:47px; margin-right:10px; width:47px;}
+
+.goodsTypeItem dl{float:left; width:175px; display:inline;}
+
+.goodsTypeItem dl dt{font-weight:bold;}
+
+.goodsIntroBox{width:765px; overflow:hidden; margin:0 auto; padding-top:15px; line-height:1.7em; font-weight:700; color:#666666;}
+
+.goodsIntroBox .left{float:left;padding:25px 0 0 0;}
+
+.goodsIntroBox .right{float:right;padding:25px 0 0;}
+
+.goodsIntroBox h2,.goodsIntroBox .h2-t{font-size:20px;line-height:1.6em;color:#000;font-weight:bold;}
+
+.goodsIntroBox h3,.goodsIntroBox .h3-t{font-size:14px;color:#000;font-weight:bold;}
+
+.goodsIntroBox h4,.goodsIntroBox .h4-t{font-size:14px;color:#116ba0;}
+
+.goodsIntroBox p{border-top:1px solid #C8C8C8;margin:10px 0 0;padding:10px 0 0;}
+
+.goodsIntroBox .text{float:left;padding:25px 0 0;}
+
+.goodsIntroBox .leftimg .text{width:265px;padding:25px 0 0 20px;}
+
+.goodsIntroBox .left-smallimg .text{width:455px;padding:25px 0 0 20px;}
+
+.goodsIntroBox .left-text .text{width:165px;}
+
+.goodsIntroBox .right-bigimg .text,.goodsIntroBox .left-bigimg .text{width:370px;}
+
+.goodsIntroBox .left-bigimg .text{padding:25px 0 0 20px;}
+
+.goodsIntroBox .right-smallimg .text{width:458px;padding:25px 20px 0 0;}
+
+.goodsIntroBox .left-text .right{padding:0 0 0 10px;}
+
+.goodsIntroBox .right-bigimg h2,.goodsIntroBox .right-bigimg .h2-t,
+
+.goodsIntroBox .right-bigimg h4,.goodsIntroBox .right-bigimg .h4-t,
+
+.goodsIntroBox .right-smallimg h2,.goodsIntroBox .right-smallimg .h2-t,
+
+.goodsIntroBox .right-smallimg h4,.goodsIntroBox .right-smallimg .h4-t{text-align:right;}
+
+.goodsIntroBox .onerow4cols,.goodsIntroBox .onerow3cols,.goodsIntroBox .twocols{padding:25px 0 0;}
+
+.goodsIntroBox .onerow4cols li{float:left;padding:0 15px;}
+
+.goodsIntroBox .onerow3cols li{float:left;padding:0 7px 0 8px;}
+
+.goodsIntroBox .twocols li{float:left;padding:0 42px;}
+
+.goodsIntroBox .twocols .text{padding:10px 0 0 10px;width:286px;}
+
+.goodsIntroBox .small{padding:25px 0 0;}
+
+.goodsIntroBox .small li{width:200px;height:300px;overflow:hidden;padding:0 15px;float:left;min-height:240px;margin:0 0 30px;}
+
+.goodsIntroBox .small .pic{margin:0 0 8px 0;width:155px;height:110px;}
+
+.goodsIntroBox .big-pic{padding:25px 0 0;}
+
+.goodsIntroBox .mixed .left,.goodsIntroBox .mixed .text{width:370px;}
+
+.goodsIntroBox .mixed .min-block{padding:25px 0 0;}
+
+.goodsIntroBox .mixed .min-block .pic{float:left;}
+
+.goodsIntroBox .mixed .min-block .text{float:right;padding:0 0 0 8px;width:150px;}
+
+.goodsIntroBox .container{padding:0;border:none;}
+
+.goodsIntroBox .container li{padding:10px 0;}
+
+.goodsIntroBox .container .text,.goodsIntroBox .container .pic-r,.goodsIntroBox .container .pic-l{float:left;width:270px;}
+
+.goodsIntroBox .container .text{padding:50px 0 0 0;}
+
+.goodsIntroBox .container h3,.goodsIntroBox .container .h3-t{color:#000;font-weight:bold;}
+
+.goodsIntroBox .title{color:#0b6fa7;}
+
+.goodsIntroBox .container .pic-r{padding:20px 0 0 20px;width:365px;height:180px;}
+
+.goodsIntroBox .container .pic-l{padding:20px 20px 0 0;width:365px;height:180px;}
+
+
+
+/*套装*/
+
+.packageGroups{ padding-bottom:12px; }
+
+.h5-title{ font-size:18px; font-weight:bold; text-indent:18px; background:url(http://cdn09.ehaier.com/v3/images/product/sprite-product-repeat.png) 0 0 repeat-x; height:39px; line-height:38px; overflow:hidden; border:1px solid #dddddd; font-family:"微软雅黑";}
+
+.h5-title span{ color:#e93872; font-size:12px;}
+
+.group-scrollbox{position:relative; padding:10px 30px; overflow:hidden; border:1px solid #dddddd; border-top:none;  }
+
+.group-item,.group-single,.group-total,.icon-add,.icon-equal{ float:left; width:auto; height:170px; display:inline; overflow:hidden; margin:0 5px;}
+
+.group-window{position:relative;  width:920px; overflow:hidden; }
+
+.group-list{ position:relative; width:10000px;}
+
+.group-item{ position:relative;padding:6px; margin-left:8px; border:1px solid #d0d0d0; overflow:hidden; }
+
+.group-item-1,.group-item-2,.group-item-3,.group-item-4,.group-item-5,.group-item-6,.group-item-7,.group-item-8,.group-item-9,.group-item-10{ width:40px; height:40px; overflow:hidden; position:absolute; top:-1px; right:-1px; background:url(http://cdn09.ehaier.com/v3/images/product/group-list.png) no-repeat;}
+
+.group-item-1{ background-position:0 0;}
+
+.group-item-2{ background-position:0 -40px;}
+
+.group-item-3{ background-position:0 -80px;}
+
+.group-item-4{ background-position:0 -120px;}
+
+.group-item-5{ background-position:0 -160px;}
+
+.group-item-6{ background-position:0 -200px;}
+
+.group-item-7{ background-position:0 -240px;}
+
+.group-item-8{ background-position:0 -280px;}
+
+.group-item-9{ background-position:0 -320px;}
+
+.group-item-10{ background-position:0 -360px;}
+
+.group-single{ width:110px; text-align:center; line-height:1.5em; word-wrap: break-word;word-break:break-all; }
+
+.packageGroups .price{ color:#d71249; font-weight:bold;}
+
+.icon-add,.icon-equal,.group-scrollbox .g-thumb-btn,.a-to-buy{background:url(http://cdn09.ehaier.com/v3/images/product/sprite-product.png) no-repeat; overflow:hidden;}
+
+.group-scrollbox .g-thumb-btn{position:absolute;top:65px;width:24px;height:40px;text-indent:-999em;overflow:hidden; }
+
+.group-scrollbox .g-prev{left:6px;background-position:3px -97px;_left:-25px;}
+
+.group-scrollbox .g-next{right:6px;background-position:3px -146px;}
+
+.group-scrollbox .a-to-buy{float:left;width:95px;height:42px;line-height:36px;padding-left:25px;text-align:center;background-position:0 0;color:#fff;font-weight:bold;font-size:1.34em;font-family:"微软雅黑";}
+
+.group-scrollbox .a-to-buy:hover{background-position:0 -44px;}
+
+.group-scrollbox .g-prev-active{background-position:-27px -97px; cursor:pointer;}
+
+.group-scrollbox .g-next-active{background-position:-27px -146px; cursor:pointer;}
+
+.group-total{ text-align:left; word-break:keep-all;white-space:nowrap; line-height:2em; font-weight:bold;}
+
+.icon-add{ width:22px; height:22px;  background-position:-70px -160px; margin-top:56px;}
+
+.icon-equal{ width:22px; height:22px;background-position:-100px -160px;margin-top:56px;}
+
+
+
+
+
+
+
+/* comments */
+
+#containerComments .m{ width:100%; overflow:hidden;}
+
+#containerComments .mt{border-bottom: 1px #ccc solid; position: relative; background: #f5f5f5;width: 100%;height:38px;}
+
+#containerComments .tab{overflow:hidden;height: 38px; position: absolute; top:1px; left:0;}
+
+#containerComments .tab li{ float:left;border-left:1px solid #dddddd;height:38px; line-height:38px; font-weight:bold;cursor:hand;cursor:pointer;}
+
+#containerComments .tab .curr{ background:#fff; margin-left:10px; color:#000; border-top:#df4b74 2px solid;position: relative; border-bottom:none;}
+
+#containerComments .tab .curr a{ color:#d71249;}
+#containerComments .tab a{padding: 20px;}
+
+#containerComments .tab em{ color:#999999;}
+
+#containerComments .tab .curr em{ color:#d71249; }
+
+#containerComments .bc{padding:10px 10px 0;}
+
+#containerComments .mc{ margin-top:-5px;}
+
+#containerComments .item{ clear:both; padding-top:10px;}
+
+#containerComments .p_user{ position:relative; float:left; width:114px; text-align:center; padding-top:10px; }
+
+#containerComments .icon_talk{ position:absolute; top:10px; right:-1px; width:15px; height:27px; background:url(http://cdn09.ehaier.com/v3/images/product/icon_clubs.png) 0 -50px no-repeat; z-index:100;}
+
+#containerComments .i-item{ float:left; border:1px solid #f3e6c6; background:#fffcf5; width:640px; padding:10px;}
+
+
+.topic{display: inline-block;background: #db295b;color: #fff;padding:1px 4px;}
+#containerComments .o-topic{ clear:both; text-align:right; border-bottom:1px solid #f3e6c6; padding-bottom:3px; overflow:hidden;}
+
+#containerComments .topic,.star{ float:left; margin-right:10px;}
+
+#containerComments .date-comment{ color:#999999;}
+
+#containerComments .comment-content{ clear:both; padding:10px 0; overflow:hidden; border-bottom: dashed 1px #ccc;}
+#containerComments .commentsup{border-bottom:none;}
+#containerComments .p-solo{margin-left:10px;line-height: 26px;}
+
+#containerComments .comment-subcontent{clear:both; padding:10px 0; overflow:hidden; border-bottom: solid 1px #f3e6c6;}
+
+#containerComments .comment-content dl,#containerComments .comment-subcontent dl{overflow:hidden;zoom:1;clear:both;line-height: 28px;}
+
+#containerComments .comment-content dt,#containerComments .comment-subcontent dt{color:#808080;float:left; width:10%; text-align:right; white-space :nowrap;margin-right: 5px;}
+#containerComments .comment-content dd div dl dt{color:#606060;}
+
+#containerComments .comment-content dd,#containerComments .comment-subcontent dd{ float:left; width:89%;}
+
+#containerComments .comment-content .s-content,#containerComments .comment-subcontent .s-content{border:1px solid #d1d1d1;display: inline-block;margin-right: 10px;padding:0 20px;background: #fff;cursor: default;margin-bottom: 10px;}
+
+
+
+#containerComments .u-name{}
+
+#containerComments .btns{ clear:both; overflow:hidden;}
+
+#containerComments .comment-content .btn-reply{ float:right; text-decoration:none; color:#1a5e8b;cursor:hand;cursor:pointer; margin: 10px 15px 0 0;}
+
+.i-item .btn-reply{ float:right; text-decoration:none; color:#1a5e8b;cursor:hand;cursor:pointer; margin: 0 15px 0 26px;}
+#containerComments .review{width:400px; height:50px;resize: none;margin-left:60px;margin-top:15px;padding: 5px;  font-size: 12px; font-family: Tahoma, 宋体; word-wrap: break-word; line-height: 18px; overflow-y: auto; overflow-x: hidden; outline: none;}
+
+#containerComments .submit{width:42px; height:25px; border-radius: 3px;border:1px solid #ccc; background:#fff;margin-left:15px;}
+
+#containerComments .u-name .a-hreply{color:#d71249;}
+
+#containerComments .comment_reply_msg{ color:#b00b25; margin-left:60px; line-height:30px;}
+
+#containerComments .item-reply{ margin-left:60px; margin-top:10px;}
+
+#containerComments .item-reply a{ color:#1A5E8B; }
+
+#containerComments .item-reply dl{overflow:hidden;margin-top:20px; border-bottom: 1px dashed #ccc;}
+
+#containerComments .item-reply dt{ line-height:26px;color:#4c4c4c;}
+
+#containerComments .item-reply dd{ line-height:24px;color:#4c4c4c;}
+
+.following_reply{margin-bottom: 10px;}
+
+#containerComments .date-comment{ float:right;}
+
+.a-godetail{text-align:right;display: block;width: 100%; color:#0059a9;}
+
+/*star*/
+
+#containerComments .star_item{ float:left; margin-left:10px; display:inline;}
+
+#star,#containerComments .star{ float:left; vertical-align:middle; line-height:20px;}
+
+.sa0,.sa1,.sa2,.sa3,.sa4,.sa5{width:64px;height:15px;background-image:url(http://cdn09.ehaier.com/v3/images/product/icon_clubs.png);background-repeat:no-repeat;overflow:hidden;}
+
+#containerComments .sa0{background-position:-65px 3px;}
+
+#containerComments .sa1{background-position:-52px 3px;}
+
+#containerComments .sa2{background-position:-39px 3px;}
+
+#containerComments .sa3{background-position:-26px 3px;}
+
+#containerComments .sa4{background-position:-13px 3px;}
+
+#containerComments .sa5{background-position:0 3px;}
+
+#more-comment{ text-align:center; line-height:30px;}
+
+#more-comment a{ text-decoration:underline;}
+
+/*加入购物车sobox*/
+/*2014-5-8 edit by Chenxi, change the padding*/
+.pop-successCart .a-sopop-btn{padding:0 10px;}
+.a-cancel .s-sopop-btn,.a-tobuy .s-sopop-btn{color: #fff;line-height: 25px;}
+.a-cancel .s-sopop-btn:hover{color: #fff;}
+
+
+/*到货通知sobox*/
+.sopop-stockeNotice .p-btn .s-btn,.so-popAlert .p-btn .s-sopop-btn{background:#005aaa; padding:0px 10px; }
+
+/*2014-5-7 add popup-box css by Chenxi*/
+/*2014-5-8 change line-height css by Chenxi*/
+/*我要咨询弹出框*/
+.ajax-popInfoBox .a-btn{background: #005aaa;padding-left:15px;line-height: 25px;}
+
+/*晒晒*/
+.ul-sharebox li{float :left;width:49px; height:49px;border:2px solid #ececec; text-align: center;margin-right: 3px; background: #fff;display: table-cell;vertical-align: middle;}
+.ul-sharebox li:hover{border:2px #d81148 solid;}
+#thumbox-dock *, #thumbox-overlay, #thumbox-image, #thumbox-border, #thumbox-loader, #thumbox-close, #thumbox-buttonNext, #thumbox-buttonPrev, #thumbox-label{
+	margin:0;
+	padding:0;
+	border:0;
+}
+#thumbox-dock{
+	position:absolute;
+	z-index:9996;
+	background:#000;
+	top:-5000px;
+	left:-5000px
+}
+#thumbox-dock .thumbox-scrollerpages{
+	overflow:hidden;
+	float:left;
+	position: relative;
+}
+#thumbox-dock .thumbox-pages{
+	position:relative;
+	width:100%;
+	left:0;
+}
+#thumbox-dock .thumbox-page{
+	text-align:center;
+	float:left;
+}
+#thumbox-dock .thumbox-page img{
+	margin:10px;
+	cursor:pointer;
+	border:5px #333 solid;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+#thumbox-dock .thumbox-arrowdock{
+	width:20px;
+	cursor:pointer;
+	float:left;
+	background:#333 no-repeat center center;
+}
+#thumbox-dock .thumbox-leftarrow{
+	background-image:url(../images/productcomment/thumbox-prev.png);
+}
+#thumbox-dock .thumbox-rightarrow{
+	background-image:url(../images/productcomment/thumbox-next.png);
+}
+#thumbox-overlay{
+	position:absolute;
+	z-index:9995;
+	top:0;
+	left:0;
+  	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  	filter: alpha(opacity=0);
+  	-moz-opacity: 0.0;
+  	-khtml-opacity: 0.0;
+  	opacity: 0.0;
+}
+.thumbox-hoverImage, .thumbox-currentImage{
+	border-color:#DDD !important;
+}
+#thumbox-image{
+	position:absolute;
+	z-index:9998;
+}
+#thumbox-border{
+	/*position:absolute;*/
+	z-index:9997;
+	background:#FFF;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+}
+#thumbox-loader{
+	position:absolute;
+	z-index:9999;
+	width:128px;
+	height:15px;
+	background:url(../images/productcomment/thumbox-loader.gif)
+}
+#thumbox-close{
+	position:absolute;
+	z-index:9999;
+	width:30px;
+	height:30px;
+	background:url(../images/productcomment/thumbox-close.png);
+	cursor:pointer;
+}
+#thumbox-buttonNext, #thumbox-buttonPrev{
+	width:41px;
+	height:66px;
+	position:absolute;
+	z-index:9999;
+	cursor:pointer;
+}
+#thumbox-buttonNext{
+	background:url(../images/productcomment/thumbox-nextImg.png);
+}
+#thumbox-buttonPrev{
+	background:url(../images/productcomment/thumbox-prevImg.png);
+}
+#thumbox-label{
+	background:url(../images/productcomment/thumbox-bgLabel.png);
+	position:absolute;
+	z-index:9999;
+	color:#FFF;
+	font-size:15px;
+	font-family:"Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+	padding:5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+}
+
+/*好评率*/
+.commentsType{background:#FFF;overflow:hidden;border-top:1px solid #ddd;border-bottom:1px solid #ddd; height:140px;}
+.commentTypeItem{float:left;display:inline;height:83px;border-right: 1px solid #ddd;margin-top: 30px;margin-left: 60px;}
+.commentTypeItemNar{width:140px;}
+.commentTypeItemWid{width:315px;margin-left: 40px;}
+.commentTypeLas{margin-left: 40px;border-right: none;}
+.commentTypeItem em{color:#606060;}
+.commentTypeItem strong{font-size:36px;color:#d71249;}
+.em-comtitle{float: left;}
+.commentTypeItem .s-gocomment{cursor:pointer;display: block;width:168px;height:32px;background: #32beff;color:#FFF;border-radius: 4px;line-height: 32px;text-align: center;font-weight: bold;font-size: 14px;margin-top: 5px;}
+
+/* barbox */
+.ratebox{clear:both;}
+.barbox{overflow:hidden;}
+.barbox dt{float:left;width:70px;text-align: left;}
+.barbox dd{float:left;}
+.barbox dd.last{color:#999;}
+.barbox dd.barline{width:160px;background:#E3E3E3;height:12px;overflow:hidden;margin:3px 10px 0 10px;display:inline;border-bottom:solid 1px #F4F4F4;border-right:solid 1px #F4F4F4;}
+.barbox dd.barline div.charts{height:12px;overflow:hidden;}
+.barbox dd.barline div.charts.bargood,.barbox dd.barline div.charts.barsoso,.barbox dd.barline div.charts.barbad{background:#C2142C;}
+
+/*评价列表*/
+.detailproduct{border:1px #ddd solid;width: 190px;float: left;padding-bottom: 11px;}
+
+.detailpage-cont #containerComments .bc{padding:10px;}
+
+.detailproduct dt{background:#f7f7f7; height: 30px;font-size: 14px; color: #333; line-height: 30px; padding-left: 10px;}
+
+.detailproduct dd{line-height: 22px;padding:0 9px;}
+
+.detailproduct .star{margin-right: 0px;}
+
+.detailproduct .sa0{background-position:-65px 3px;}
+
+.detailproduct .sa1{background-position:-52px 3px;}
+
+.detailproduct .sa2{background-position:-39px 3px;}
+
+.detailproduct .sa3{background-position:-26px 3px;}
+
+.detailproduct .sa4{background-position:-13px 3px;}
+
+.detailproduct .sa5{background-position:0 3px;}
+
+.detailproduct a.a-to-cart{margin-left: 30px;}
+
+/*分页*/
+.holder {margin: 15px 0;text-align:right;width: 100%;}
+.holder a {font-size: 12px; cursor: pointer;margin: 0 5px;display: inline-block;padding:5px 10px;color: #bbb;border-radius:3px;border:1px solid #ccc;}
+  .holder a:hover {color: #bbb;}
+  .holder a.jp-previous,.holder a.jp-next { margin-right: 15px; border:none;}
+  .holder a.jp-current, a.jp-current:hover {font-weight: bold;border:none;padding:6px 11px;}
+  .holder a.jp-disabled, a.jp-disabled:hover {cursor: default;color: #bbb;}  
+  .holder a.jp-disabled, a.jp-disabled:hover {cursor: default;}
+  a.jp-current:hover,.holder a.jp-current{cursor: text;background: #005aaa; color:#FFF;}
+  .holder span { margin: 0 5px; }

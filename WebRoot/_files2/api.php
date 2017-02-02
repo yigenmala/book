@@ -1,0 +1,2 @@
+document.write('<div><input type="hidden" id="uid4ntalk" value=""><input type="hidden" id="uname4ntalk" value=""><input type="hidden" id="userlevel4ntalk" value=""></div>');
+<!-- Elapsed time: 14.36 ms, Memory amount: 1.51 mb --><!-- songmeng -->
